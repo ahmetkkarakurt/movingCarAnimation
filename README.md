@@ -1,5 +1,5 @@
 # movingCarAnimation
-Moving car animatioon using HTML\Css&amp;Javascript
+Moving car animation using HTML\Css&amp;Javascript
 
 
 
