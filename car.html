@@ -1,0 +1,96 @@
+# Function-etc names must be in english
+# ---->> Naming convention--- 
+# File and code structure|| for web programming
+# Create github account and create first repo and push it
+# --->> How to ue github and what is git flow ?
+# Start learning jquery from w3scholl 
+
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Araba</title>
+	<style>
+	body{
+		display:flex;
+		align-items:center;
+		justify-content:center;
+		height::100vh;
+	}
+	.yol{
+		position:absolute;
+		height:460px;
+		width:810px;
+		top:150px;
+		background: url("road.jpg");
+		background-size: cover;
+		animation-name:yol_arka;
+		animation-direction:reverse;
+		animation-duration: 4s;
+		animation-iteration-count:infinite;
+		animation-timing-function: linear;
+	}
+	.araba{
+		width:420px;
+		height:150px;
+		background:url("arac.png");
+		position:absolute;
+		top:285px;
+		left:75px;
+		}
+	.teker{
+		position:absolute;
+		height:64px;
+		background: url("teker.png");
+		width:64px;
+		top:84px;
+		left:42px;
+		
+		animation-name:dondur;
+		animation-direction:normal;
+		animation-duration: 2s;
+		animation-iteration-count:infinite;
+		animation-timing-function: linear;
+	}
+	
+	.teker:nth-child(1){left:310px;}
+		@keyframes dondur{
+			from{}
+			to{ transform: rotate(360deg);}
+		}
+		@keyframes yol_arka{
+			from{}
+			to{ background-position:815px 0;}
+		}
+	</style>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $(".play-animation").click(function(){
+            $(".yol").css("animation-play-state", "running");
+			$(".teker").css("animation-play-state", "running");
+        });
+        $(".stop-animation").click(function(){
+            $(".yol").css("animation-play-state", "paused");
+			$(".teker").css("animation-play-state", "paused");
+        });
+    });
+</script>
+</head>
+<body>
+	<div class="yol">
+	  <div class="araba">
+	    <div class="teker"></div>
+		<div class="teker"></div>
+	  </div>
+	</div>
+	<button type="button" class="play-animation">Play Animation</button>
+    <button type="button" class="stop-animation">Stop Animation</button>
+
+<script>
+
+</script>
+
+</body>
+</html>
